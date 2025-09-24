@@ -1,0 +1,153 @@
+// Flutter App Expert .cursorrules
+
+// Flexibility Notice
+
+// Note: This is a recommended project structure, but be flexible and adapt to existing project structures.
+// Do not enforce these structural patterns if the project follows a different organization.
+// Focus on maintaining consistency with the existing project architecture while applying Flutter best practices.
+
+// Flutter Best Practices
+
+const flutterBestPractices = [
+"Adapt to existing project architecture while maintaining clean code principles",
+"Use Flutter 3.x features and Material 3 design",
+"Implement clean architecture with Cubit pattern",
+"Follow proper state management principles. Ensure state objects are immutable and use copyWith for updates. Each Cubit should be responsible for a single feature or screen.",
+"Use proper dependency injection, preferring GetIt with the injectable package for automated code generation to reduce boilerplate.",
+"Implement proper error handling. Use the Either type for network/data layer errors and define custom exceptions for clear error states.",
+"Follow platform-specific design guidelines",
+"Use proper localization techniques",
+];
+
+// Project Structure
+
+// Core: Application-wide concerns
+// Features: Domain-specific modules
+
+// Note: This is a reference structure. Adapt to the project's existing organization
+
+const projectStructure = `
+lib/
+  core/
+    data/
+        models/ (shared data models)
+        repositories/ (shared repositories)
+        services/ (shared services)
+    errors/
+        exceptions.dart
+        failures.dart
+    helper/
+    constants/
+    theme/
+    utils/
+    widgets/ (shared UI components)
+  features/
+    feature_name/
+      data/
+        datasources/ (e.g., remote_data_source.dart, local_data_source.dart)
+        models/ (feature-specific data models)
+        repositories/ (e.g., feature_repository_impl.dart)
+        services/
+      view_model/
+        cubit/
+      presentation/
+        screens/
+        widgets/
+  l10n/
+  main.dart
+
+// Coding Guidelines
+
+const codingGuidelines = `
+
+Use proper null safety practices
+
+Implement proper error handling with Either type
+
+Follow proper naming conventions
+
+Use proper widget composition
+
+Implement proper routing using GoRouter
+
+Use proper form validation
+
+Follow proper state management with Cubit
+
+Implement proper dependency injection using GetIt
+
+Use proper asset management
+
+Follow proper testing practices. Write unit tests for the domain and Cubit layers, widget tests for complex UI components, and integration tests for critical user flows.
+`;
+
+// Widget Guidelines
+
+const widgetGuidelines = `
+
+Keep widgets small and focused
+
+Use const constructors when possible
+
+Implement proper widget keys
+
+Follow proper layout principles
+
+Use proper widget lifecycle methods
+
+Implement proper error boundaries. Use ErrorWidget.builder and ErrorBoundary widgets to provide a graceful fallback UI for runtime errors.
+
+Use proper performance optimization techniques
+
+Follow proper accessibility guidelines. Ensure sufficient color contrast, use semantic widgets, and provide clear labels for screen readers.
+`;
+
+// Widget Organization Guidelines
+
+const widgetOrganization = `
+
+Keep widget and screens files concise and focused - target under 100 lines per file (maximum 150 lines)
+
+Break down large widgets into smaller, reusable components
+
+Extract complex UI logic into separate helper functions or mixins
+
+Use composition over inheritance for widget building
+
+Create dedicated widget files for reusable components
+
+Separate business logic from presentation layer
+
+Use the following strategies to maintain file size limits:
+  - Extract custom widgets into separate files
+  - Move styling into theme files or separate style classes
+  - Extract constants and configurations into dedicated files
+  - Use builder patterns for complex widget hierarchies
+  - Implement widget factories for repeated patterns
+
+If a widget file exceeds 100 lines, consider:
+  - Breaking it into multiple smaller widgets
+  - Moving static methods to utility classes
+  - Extracting styling into theme extensions
+  - Creating specialized builder widgets
+  - Using mixins for shared functionality
+`;
+
+// Performance Guidelines
+
+const performanceGuidelines = `
+
+Use proper image caching
+
+Implement proper list view optimization. Use ListView.builder for long lists to lazy-load items and prevent unnecessary widget creation.
+
+Use proper build methods optimization
+
+Follow proper state management patterns
+
+Implement proper memory management. Dispose of controllers, streams, and other resources in dispose() methods to prevent memory leaks.
+
+Use proper platform channels when needed
+
+Follow proper compilation optimization techniques
+`;

@@ -1,0 +1,139 @@
+{
+  "@@locale": "en",
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Text for create account button"
+  },
+  "joinPlatform": "Join our project management platform",
+  "@joinPlatform": {
+    "description": "Subtitle for registration screen"
+  },
+  "fullName": "Full Name",
+  "@fullName": {
+    "description": "Label for full name input field"
+  },
+  "enterFullName": "Enter your full name",
+  "@enterFullName": {
+    "description": "Placeholder for full name input"
+  },
+  "emailAddress": "Email Address",
+  "@emailAddress": {
+    "description": "Label for email input field"
+  },
+  "enterEmail": "Enter your email",
+  "@enterEmail": {
+    "description": "Placeholder for email input"
+  },
+  "role": "Role",
+  "@role": {
+    "description": "Label for role selection"
+  },
+  "selectRole": "Select your role",
+  "@selectRole": {
+    "description": "Placeholder for role dropdown"
+  },
+  "university": "University",
+  "@university": {
+    "description": "Label for university selection"
+  },
+  "selectUniversity": "Select your university",
+  "@selectUniversity": {
+    "description": "Placeholder for university dropdown"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Label for password input field"
+  },
+  "createPassword": "Create a password",
+  "@createPassword": {
+    "description": "Placeholder for password input"
+  },
+  "confirmPassword": "Confirm Password",
+  "@confirmPassword": {
+    "description": "Label for confirm password field"
+  },
+  "confirmPasswordHint": "Confirm your password",
+  "@confirmPasswordHint": {
+    "description": "Placeholder for confirm password field"
+  },
+  "passwordHint": "Password must be at least 8 characters",
+  "@passwordHint": {
+    "description": "Hint text for password requirements"
+  },
+  "agreeToTerms": "I agree to the ",
+  "@agreeToTerms": {
+    "description": "Text before terms of service link"
+  },
+  "termsOfService": "Terms of Service",
+  "@termsOfService": {
+    "description": "Link text for terms of service"
+  },
+  "and": "and",
+  "@and": {
+    "description": "Conjunction between terms and privacy policy"
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Link text for privacy policy"
+  },
+  "resetForm": "Reset Form",
+  "@resetForm": {
+    "description": "Text for reset form button"
+  },
+  "alreadyHaveAccount": "Already have an account? ",
+  "@alreadyHaveAccount": {
+    "description": "Text before sign in link"
+  },
+  "signInHere": "Sign in here",
+  "@signInHere": {
+    "description": "Link text for sign in"
+  },
+  "roleRequired": "Please select a role",
+  "@roleRequired": {
+    "description": "Validation message for required role"
+  },
+  "universityRequired": "Please select a university",
+  "@universityRequired": {
+    "description": "Validation message for required university"
+  },
+  "agreeToTermsRequired": "You must agree to the terms and conditions",
+  "@agreeToTermsRequired": {
+    "description": "Validation message for terms agreement"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Text for login button"
+  },
+  "enterPassword": "Enter your password",
+  "@enterPassword": {
+    "description": "Placeholder for password input"
+  },
+  "forgotPassword": "Forgot Password?",
+  "@forgotPassword": {
+    "description": "Link text for forgot password"
+  },
+  "dontHaveAccount": "Don't have an account? ",
+  "@dontHaveAccount": {
+    "description": "Text before sign up link"
+  },
+  "signUpHere": "Sign up here",
+  "@signUpHere": {
+    "description": "Link text for sign up"
+  },
+  "welcomeBack": "Welcome Back",
+  "@welcomeBack": {
+    "description": "Welcome message for sign in screen"
+  },
+  "signInToWorkspace": "Sign in to your academic workspace",
+  "@signInToWorkspace": {
+    "description": "Subtitle for sign in screen"
+  },
+  "rememberMe": "Remember me",
+  "@rememberMe": {
+    "description": "Text for remember me checkbox"
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Text for sign in button"
+  }
+}

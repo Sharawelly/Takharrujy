@@ -1,0 +1,139 @@
+{
+  "@@locale": "ar",
+  "createAccount": "إنشاء حساب",
+  "@createAccount": {
+    "description": "نص زر إنشاء الحساب"
+  },
+  "joinPlatform": "انضم إلى منصة إدارة المشاريع الخاصة بنا",
+  "@joinPlatform": {
+    "description": "العنوان الفرعي لشاشة التسجيل"
+  },
+  "fullName": "الاسم الكامل",
+  "@fullName": {
+    "description": "تسمية حقل إدخال الاسم الكامل"
+  },
+  "enterFullName": "أدخل اسمك الكامل",
+  "@enterFullName": {
+    "description": "النص التوضيحي لحقل الاسم الكامل"
+  },
+  "emailAddress": "عنوان البريد الإلكتروني",
+  "@emailAddress": {
+    "description": "تسمية حقل إدخال البريد الإلكتروني"
+  },
+  "enterEmail": "أدخل بريدك الإلكتروني",
+  "@enterEmail": {
+    "description": "النص التوضيحي لحقل البريد الإلكتروني"
+  },
+  "role": "الدور",
+  "@role": {
+    "description": "تسمية اختيار الدور"
+  },
+  "selectRole": "اختر دورك",
+  "@selectRole": {
+    "description": "النص التوضيحي لقائمة الأدوار"
+  },
+  "university": "الجامعة",
+  "@university": {
+    "description": "تسمية اختيار الجامعة"
+  },
+  "selectUniversity": "اختر جامعتك",
+  "@selectUniversity": {
+    "description": "النص التوضيحي لقائمة الجامعات"
+  },
+  "password": "كلمة المرور",
+  "@password": {
+    "description": "تسمية حقل إدخال كلمة المرور"
+  },
+  "createPassword": "أنشئ كلمة مرور",
+  "@createPassword": {
+    "description": "النص التوضيحي لحقل كلمة المرور"
+  },
+  "confirmPassword": "تأكيد كلمة المرور",
+  "@confirmPassword": {
+    "description": "تسمية حقل تأكيد كلمة المرور"
+  },
+  "confirmPasswordHint": "أكد كلمة المرور",
+  "@confirmPasswordHint": {
+    "description": "النص التوضيحي لحقل تأكيد كلمة المرور"
+  },
+  "passwordHint": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+  "@passwordHint": {
+    "description": "نص تلميح لمتطلبات كلمة المرور"
+  },
+  "agreeToTerms": "أوافق على ",
+  "@agreeToTerms": {
+    "description": "النص قبل رابط شروط الخدمة"
+  },
+  "termsOfService": "شروط الخدمة",
+  "@termsOfService": {
+    "description": "نص رابط شروط الخدمة"
+  },
+  "and": "و",
+  "@and": {
+    "description": "الربط بين الشروط وسياسة الخصوصية"
+  },
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {
+    "description": "نص رابط سياسة الخصوصية"
+  },
+  "resetForm": "إعادة تعيين النموذج",
+  "@resetForm": {
+    "description": "نص زر إعادة تعيين النموذج"
+  },
+  "alreadyHaveAccount": "لديك حساب بالفعل؟ ",
+  "@alreadyHaveAccount": {
+    "description": "النص قبل رابط تسجيل الدخول"
+  },
+  "signInHere": "سجل الدخول هنا",
+  "@signInHere": {
+    "description": "نص رابط تسجيل الدخول"
+  },
+  "roleRequired": "يرجى اختيار دور",
+  "@roleRequired": {
+    "description": "رسالة التحقق للدور المطلوب"
+  },
+  "universityRequired": "يرجى اختيار جامعة",
+  "@universityRequired": {
+    "description": "رسالة التحقق للجامعة المطلوبة"
+  },
+  "agreeToTermsRequired": "يجب الموافقة على الشروط والأحكام",
+  "@agreeToTermsRequired": {
+    "description": "رسالة التحقق لاتفاقية الشروط"
+  },
+  "login": "تسجيل الدخول",
+  "@login": {
+    "description": "نص زر تسجيل الدخول"
+  },
+  "enterPassword": "أدخل كلمة المرور",
+  "@enterPassword": {
+    "description": "النص التوضيحي لحقل كلمة المرور"
+  },
+  "forgotPassword": "نسيت كلمة المرور؟",
+  "@forgotPassword": {
+    "description": "نص رابط نسيان كلمة المرور"
+  },
+  "dontHaveAccount": "ليس لديك حساب؟ ",
+  "@dontHaveAccount": {
+    "description": "النص قبل رابط التسجيل"
+  },
+  "signUpHere": "سجل هنا",
+  "@signUpHere": {
+    "description": "نص رابط التسجيل"
+  },
+  "welcomeBack": "مرحباً بعودتك",
+  "@welcomeBack": {
+    "description": "رسالة الترحيب لشاشة تسجيل الدخول"
+  },
+  "signInToWorkspace": "سجل الدخول إلى مساحة العمل الأكاديمية",
+  "@signInToWorkspace": {
+    "description": "العنوان الفرعي لشاشة تسجيل الدخول"
+  },
+  "rememberMe": "تذكرني",
+  "@rememberMe": {
+    "description": "نص مربع تذكرني"
+  },
+  "signIn": "تسجيل الدخول",
+  "@signIn": {
+    "description": "نص زر تسجيل الدخول"
+  }
+}
