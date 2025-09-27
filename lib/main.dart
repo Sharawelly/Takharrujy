@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,8 +8,20 @@ import 'core/theme/app_theme.dart';
 import 'core/router/app_router.dart';
 import 'l10n/generated/app_localizations.dart';
 import 'features/auth/view_model/cubit/auth_cubit.dart';
+import 'package:window_size/window_size.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    const double width = 320;
+    const double height = 800;
+    setWindowFrame(Rect.fromLTWH(100, 100, width, height));
+    setWindowMinSize(const Size(width, height));
+    setWindowMaxSize(const Size(width, height));
+    setWindowTitle('Takharrujy');
+  }
+
   runApp(const TakharrujyApp());
 }
 
