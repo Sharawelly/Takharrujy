@@ -27,17 +27,17 @@ class ProjectActionButtons extends StatelessWidget {
           width: double.infinity,
           height: 80.h,
           child: ElevatedButton(
+            key: const Key('createProjectButton'), // ✅ added key
             onPressed: onCreateProject,
-            style:
-                ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  shadowColor: Colors.transparent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.r),
-                  ),
-                ).copyWith(
-                  backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.r),
+              ),
+            ).copyWith(
+              backgroundColor: WidgetStateProperty.all(Colors.transparent),
+            ),
             child: Container(
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
@@ -87,9 +87,17 @@ class ProjectActionButtons extends StatelessWidget {
         // Secondary Buttons
         Row(
           children: [
-            ProjectSecondaryButton(text: 'Reset Form', onPressed: onResetForm),
+            ProjectSecondaryButton(
+              key: const Key('resetFormButton'), // ✅ added key
+              text: 'Reset Form',
+              onPressed: onResetForm,
+            ),
             SizedBox(width: 12.w),
-            ProjectSecondaryButton(text: 'Save Draft', onPressed: onSaveDraft),
+            ProjectSecondaryButton(
+              key: const Key('saveDraftButton'), // ✅ added key
+              text: 'Save Draft',
+              onPressed: onSaveDraft,
+            ),
           ],
         ),
       ],

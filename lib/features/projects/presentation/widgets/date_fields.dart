@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/text_styles.dart';
-import '../../../../core/utils/app_images.dart';
 
-class DateFields extends StatelessWidget {
+class DateFields extends StatefulWidget {
   final DateTime? startDate;
   final DateTime? endDate;
   final ValueChanged<DateTime> onStartDateSelected;
@@ -18,6 +16,32 @@ class DateFields extends StatelessWidget {
     required this.onStartDateSelected,
     required this.onEndDateSelected,
   });
+
+  @override
+  State<DateFields> createState() => _DateFieldsState();
+}
+
+class _DateFieldsState extends State<DateFields> {
+  final TextEditingController _startDateController = TextEditingController();
+  final TextEditingController _endDateController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.startDate != null) {
+      _startDateController.text = _formatDate(widget.startDate!);
+    }
+    if (widget.endDate != null) {
+      _endDateController.text = _formatDate(widget.endDate!);
+    }
+  }
+
+  @override
+  void dispose() {
+    _startDateController.dispose();
+    _endDateController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,19 +73,19 @@ class DateFields extends StatelessWidget {
           children: [
             Expanded(
               child: _buildDateField(
-                context,
                 label: 'Start Date',
-                date: startDate,
-                onTap: () => _selectDate(context, onStartDateSelected),
+                controller: _startDateController,
+                keyName: 'startDateField',
+                onDateSelected: widget.onStartDateSelected,
               ),
             ),
             SizedBox(width: 12.w),
             Expanded(
               child: _buildDateField(
-                context,
                 label: 'End Date',
-                date: endDate,
-                onTap: () => _selectDate(context, onEndDateSelected),
+                controller: _endDateController,
+                keyName: 'endDateField',
+                onDateSelected: widget.onEndDateSelected,
               ),
             ),
           ],
@@ -70,11 +94,11 @@ class DateFields extends StatelessWidget {
     );
   }
 
-  Widget _buildDateField(
-    BuildContext context, {
+  Widget _buildDateField({
     required String label,
-    required DateTime? date,
-    required VoidCallback onTap,
+    required TextEditingController controller,
+    required String keyName,
+    required ValueChanged<DateTime> onDateSelected,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,77 +112,31 @@ class DateFields extends StatelessWidget {
           ),
         ),
         SizedBox(height: 8.h),
-        GestureDetector(
-          onTap: onTap,
-          child: Container(
-            width: double.infinity,
-            height: 48.h,
-            padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
-            decoration: BoxDecoration(
-              color: AppColors.surface,
-              border: Border.all(color: AppColors.border),
+        TextFormField(
+          key: Key(keyName),
+          controller: controller,
+          decoration: InputDecoration(
+            hintText: 'YYYY-MM-DD',
+            border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.r),
             ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    date != null
-                        ? '${date.day.toString().padLeft(2, '0')}/${date.month.toString().padLeft(2, '0')}/${date.year}'
-                        : 'Select date',
-                    style: AppTextStyles.bodyMedium.copyWith(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: date != null
-                          ? AppColors.textPrimary
-                          : AppColors.textSecondary,
-                    ),
-                  ),
-                ),
-                SvgPicture.asset(
-                  AppImages.date,
-                  width: 16.w,
-                  height: 16.h,
-                  colorFilter: const ColorFilter.mode(
-                    AppColors.textSecondary,
-                    BlendMode.srcIn,
-                  ),
-                ),
-              ],
-            ),
           ),
+          onChanged: (value) {
+            try {
+              final date = DateTime.parse(value);
+              onDateSelected(date);
+            } catch (_) {
+
+            }
+          },
         ),
       ],
     );
   }
 
-  Future<void> _selectDate(
-    BuildContext context,
-    ValueChanged<DateTime> onDateSelected,
-  ) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
-      lastDate: DateTime.now().add(
-        const Duration(days: 365 * 2),
-      ), // 2 years from now
-      builder: (context, child) {
-        return Theme(
-          data: Theme.of(context).copyWith(
-            colorScheme: const ColorScheme.light(
-              primary: AppColors.primary,
-              onPrimary: Colors.white,
-              onSurface: AppColors.textPrimary,
-            ),
-          ),
-          child: child!,
-        );
-      },
-    );
-
-    if (picked != null) {
-      onDateSelected(picked);
-    }
+  String _formatDate(DateTime date) {
+    return '${date.year.toString().padLeft(4, '0')}-'
+        '${date.month.toString().padLeft(2, '0')}-'
+        '${date.day.toString().padLeft(2, '0')}';
   }
 }

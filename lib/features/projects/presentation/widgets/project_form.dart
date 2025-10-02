@@ -75,15 +75,22 @@ class ProjectForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Project Title
-            ProjectTitleField(controller: titleController),
+            ProjectTitleField(
+              key: const Key('titleField'),
+              controller: titleController,
+            ),
             SizedBox(height: 24.h),
 
             // Project Description
-            ProjectDescriptionField(controller: descriptionController),
+            ProjectDescriptionField(
+              key: const Key('descriptionField'),
+              controller: descriptionController,
+            ),
             SizedBox(height: 24.h),
 
             // Team Members
             TeamMemberWidget(
+              key: const Key('teamMembersWidget'),
               teamMembers: teamMembers,
               onTeamMembersChanged: onTeamMembersChanged,
             ),
@@ -91,6 +98,7 @@ class ProjectForm extends StatelessWidget {
 
             // Supervisor Preference
             SupervisorField(
+              key: const Key('supervisorDropdown'),
               selectedSupervisor: selectedSupervisor,
               supervisors: supervisors,
               onChanged: onSupervisorChanged,
@@ -99,6 +107,7 @@ class ProjectForm extends StatelessWidget {
 
             // Project Category
             CategoryField(
+              key: const Key('categoryDropdown'),
               selectedCategory: selectedCategory,
               categories: categories,
               onChanged: onCategoryChanged,
@@ -107,6 +116,7 @@ class ProjectForm extends StatelessWidget {
 
             // Date Fields
             DateFields(
+              key: const Key('dateFields'),
               startDate: startDate,
               endDate: endDate,
               onStartDateSelected: onStartDateSelected,
@@ -116,6 +126,7 @@ class ProjectForm extends StatelessWidget {
 
             // Action Buttons
             ProjectActionButtons(
+              key: const Key('actionButtons'),
               onCreateProject: onCreateProject,
               onResetForm: onResetForm,
               onSaveDraft: onSaveDraft,
