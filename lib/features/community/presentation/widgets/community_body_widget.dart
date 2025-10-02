@@ -69,6 +69,7 @@ class CommunityBodyWidget extends StatelessWidget {
 
   Widget _buildProjectListHeader() {
     return CommunityProjectListHeader(
+      key: const Key('sortButton'),
       projectCount: filteredProjects.length,
       selectedSort: selectedSort,
       onSortPressed: onSortPressed,

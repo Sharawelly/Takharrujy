@@ -17,8 +17,10 @@ class CommunityProjectList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      key: const Key('communityProjectsList'),
       children: projects.map((project) {
         return CommunityProjectCard(
+          key: Key('projectCard_${project.id}'),
           project: project,
           onJoinPressed: () => onJoinProject(project),
           onViewPressed: () => onViewProject(project),

@@ -44,6 +44,7 @@ class CommunityFilterSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildFilterDropdown(
+            key: const Key('facultyDropdown'),
             label: CommunityConstants.facultyLabel,
             value: selectedFaculty,
             items: CommunityConstants.facultyOptions,
@@ -51,6 +52,7 @@ class CommunityFilterSection extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           _buildFilterDropdown(
+            key: const Key('departmentDropdown'),
             label: CommunityConstants.departmentLabel,
             value: selectedDepartment,
             items: CommunityConstants.departmentOptions,
@@ -58,6 +60,7 @@ class CommunityFilterSection extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           _buildFilterDropdown(
+            key: const Key('statusDropdown'),
             label: CommunityConstants.statusLabel,
             value: selectedStatus,
             items: CommunityConstants.statusOptions,
@@ -71,6 +74,7 @@ class CommunityFilterSection extends StatelessWidget {
   }
 
   Widget _buildFilterDropdown({
+    required Key key,
     required String label,
     required String value,
     required List<String> items,
@@ -97,6 +101,7 @@ class CommunityFilterSection extends StatelessWidget {
           ),
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
+              key: key,
               value: value,
               onChanged: onChanged,
               items: items.map((item) {
@@ -129,6 +134,7 @@ class CommunityFilterSection extends StatelessWidget {
 
   Widget _buildSearchButton() {
     return GestureDetector(
+      key: const Key('searchProjectsButton'),
       onTap: onSearchPressed,
       child: Container(
         width: double.infinity,

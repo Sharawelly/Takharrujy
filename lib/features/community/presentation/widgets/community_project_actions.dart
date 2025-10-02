@@ -43,16 +43,19 @@ class CommunityProjectActions extends StatelessWidget {
     VoidCallback? onPressed,
   }) {
     return GestureDetector(
+      key: isPrimary
+          ? Key('joinProjectButton_${project.id}')
+          : Key('disabledJoinButton_${project.id}'),
       onTap: onPressed,
       child: Container(
         height: 44.h,
         decoration: BoxDecoration(
           gradient: isPrimary
               ? LinearGradient(
-                  colors: [AppColors.primary, AppColors.primaryDark],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                )
+            colors: [AppColors.primary, AppColors.primaryDark],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          )
               : null,
           color: isPrimary ? null : AppColors.border,
           borderRadius: BorderRadius.circular(8.r),
@@ -82,6 +85,7 @@ class CommunityProjectActions extends StatelessWidget {
 
   Widget _buildViewButton() {
     return GestureDetector(
+      key: Key('viewProjectButton_${project.id}'),
       onTap: onViewPressed,
       child: Container(
         width: 44.w,
