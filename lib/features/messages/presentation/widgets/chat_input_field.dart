@@ -71,6 +71,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
             // Text Input Field
             Expanded(
               child: TextField(
+                key: const Key('messageInputField'), // 🔑 KEY ADDED
                 controller: widget.controller,
                 decoration: InputDecoration(
                   hintText: 'Type your message...',
@@ -112,6 +113,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
                 borderRadius: BorderRadius.circular(8.r),
               ),
               child: IconButton(
+                key: const Key('sendMessageButton'), // 🔑 KEY ADDED
                 onPressed: _isTyping ? widget.onSend : null,
                 icon: Icon(Icons.send, color: AppColors.white, size: 16.w),
                 padding: EdgeInsets.zero,

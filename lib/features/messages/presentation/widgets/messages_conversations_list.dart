@@ -28,6 +28,7 @@ class MessagesConversationsList extends StatelessWidget {
 
   Widget _buildConversationsList() {
     return ListView.builder(
+      key: const Key('conversationsList'), // 🔑 KEY ADDED
       itemCount: conversations.length,
       itemBuilder: (context, index) {
         final conversation = conversations[index];

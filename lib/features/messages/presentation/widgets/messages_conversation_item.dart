@@ -19,6 +19,7 @@ class MessagesConversationItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      key: Key('conversationItem_${conversation.id}'), // 🔑 KEY ADDED
       onTap: onTap,
       child: Container(
         width: MessagesConstants.containerWidth.w,

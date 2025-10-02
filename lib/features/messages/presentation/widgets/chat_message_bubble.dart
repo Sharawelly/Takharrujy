@@ -46,6 +46,7 @@ class ChatMessageBubble extends StatelessWidget {
         // Message Bubble
         Flexible(
           child: Container(
+            key: Key('chatMessage_${message.id}'), // 🔑 OPTIONAL KEY ADDED
             constraints: BoxConstraints(
               maxWidth: 0.7 * MediaQuery.of(context).size.width,
             ),
